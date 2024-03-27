@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button MQTT Sender</title>
+</head>
+<body>
+  <h1>Press the button to send MQTT message</h1>
+  <button id="sendButton">Send MQTT Message</button>
+  
+  <script>
+    // Send a POST request to trigger message sending when button is clicked
+    document.getElementById("sendButton").addEventListener("click", () => {
+      fetch("/send-message", { method: "POST" })
+        .then(response => response.text())
+        .then(message => console.log(message))
+        .catch(error => console.error("Error:", error));
+    });
+  </script>
+</body>
+</html>

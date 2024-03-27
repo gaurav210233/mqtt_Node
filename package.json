@@ -1,0 +1,15 @@
+{
+  "name": "his_mqtt",
+  "version": "1.0.0",
+  "description": "Testing MQTT with ESP32 Hardware",
+  "main": "index.js",
+  "scripts": {
+    "test": "node mqtt_node.js"
+  },
+  "author": "Gaurav Bankar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mqtt": "^5.5.0"
+  }
+}
